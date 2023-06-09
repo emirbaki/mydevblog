@@ -7,8 +7,3 @@ export default createClient({
     apiVersion: '2023-05-03',
 
 })
-
-export async function getPosts() {
-    const posts = await client.fetch('*[_type == "post"]')
-    return posts
-  }
