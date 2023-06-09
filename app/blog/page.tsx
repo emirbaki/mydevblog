@@ -36,7 +36,7 @@ export default async function Blogs(){
     </main>
   )
 }
-export async function getData(){
+async function getData(){
   const query = '*[_type == "post"]{title, slug,"categories": categories[]-> title, mainImage{ asset->{_id,url}, alt}}'
 
   const posts = await sanityClient.fetch(query)
