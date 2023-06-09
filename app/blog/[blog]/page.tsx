@@ -14,7 +14,7 @@ const serializers = {
     ),
   },
 }
-export async function getBlog(slug : string) {
+async function getBlog(slug : string) {
   const query = '*[_type == "post" && slug.current == $slug][0]{title, slug,"categories": categories[]-> title, mainImage{ asset->{_id,url}, alt}, body}'
   const posts = await sanityClient.fetch(query, {slug})
 
