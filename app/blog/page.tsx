@@ -1,7 +1,8 @@
+'use client'
 import sanityClient  from '../../sanity'
 import React from 'react'
-import Link from 'next/link'
 import BlogCard from '@/components/blogcard'
+import { Heading } from '@/components/nav/Heading'
 
 
 export default async function Blogs(){
@@ -9,22 +10,18 @@ export default async function Blogs(){
 
   return (
     <main className='blog-main'>
+      <Heading />
       <section className='post-section'>
-        <h1>
-          <Link href='/'>emirbakidemirci</Link>
-          <span className='cursor'>|</span>
-        </h1>
-
         <h3>Recent Posts</h3>
 
         <div className='posts'>
           {
             posts && posts.map((post : any) => (
-              <article key = {post.slug.current}>
-                <a href={'/blog/'+post.slug.current}>
-                  <BlogCard post = {post}/>
-                </a>
-              </article>
+                <article key = {post.slug.current}>
+                  <a href={'/blog/'+post.slug.current}>
+                    <BlogCard post = {post}/>
+                  </a>
+                </article>
             ))
           }
         </div>
