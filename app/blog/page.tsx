@@ -33,5 +33,12 @@ async function getData(){
   const query = '*[_type == "post"]{title, slug,"categories": categories[]-> title, mainImage{ asset->{_id,url}, alt}}'
 
   const posts = await sanityClient.fetch(query)
-  return posts
+  if(posts != null)
+  {
+    return posts
+  }
+  else
+  {
+    return [];
+  }
 }
