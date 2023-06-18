@@ -64,6 +64,12 @@ body {
   padding: 0.2rem 0.8rem;
   border-radius: 999px;
 }
+.chipSecondary {
+  font-size: var(--text-xs);
+  background: #484848;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+}
 :root {
   --text-color: #6ba1ff;
   --foreground-rgb: 0, 0, 0;
@@ -143,57 +149,7 @@ nav ul li{
   padding: 15px;
 }
 
-.post-section{
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
 
-.posts{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.post-body{
-  display: block;
-  height: 24rem;
-  position: relative;
-  border-radius: 1rem;
-  border-color: var(--text-color);
-}
-
-.post-body img{
-  height: 100%;
-  width: 100%;
-  border-radius: 1rem;
-  position: absolute;
-  object-fit: scale-down;
-}
-
-.post-info{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.post-category{
-  background-color: #202020;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  color: whitesmoke;
-}
-
-.post-title{
-  background-color: #202020;
-  margin: 0;
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  color: whitesmoke
-}
 
 .blog-header{
   display: flex;
